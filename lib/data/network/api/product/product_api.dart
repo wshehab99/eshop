@@ -5,4 +5,5 @@ import 'product_api_implementer.dart';
 abstract class ProductApi {
   factory ProductApi(DioMethods dio) = ProductApiImplementer;
   Future<List<Product>> categoryProducts(String category);
+  Future<Product> showProduct(int id);
 }

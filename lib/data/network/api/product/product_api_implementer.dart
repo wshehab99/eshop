@@ -17,4 +17,12 @@ class ProductApiImplementer implements ProductApi {
     );
     return Product.fromList(response.data);
   }
+
+  @override
+  Future<Product> showProduct(int id) async {
+    Response response = await _dio.get<Product>(
+      path: ApiConfig.showOroduct(id),
+    );
+    return Product.fromJson(response.data);
+  }
 }

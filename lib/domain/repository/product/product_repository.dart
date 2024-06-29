@@ -9,4 +9,5 @@ import 'product_repository_implementer.dart';
 abstract class ProductRepository {
   factory ProductRepository(ProductApi api) = ProductRepositoryImplementer;
   Future<Either<Failure, List<Product>>> categoryProducts(String category);
+  Future<Either<Failure, Product>> showProduct(int id);
 }
