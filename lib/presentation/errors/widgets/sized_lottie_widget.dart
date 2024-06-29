@@ -14,13 +14,7 @@ class SizedLottieWidget extends StatelessWidget {
       child: OverflowBox(
         maxWidth: overall,
         minWidth: overall,
-        child: ColorFiltered(
-          colorFilter: ColorFilter.mode(
-            Theme.of(context).primaryColor,
-            BlendMode.srcIn,
-          ),
-          child: Lottie.asset(url),
-        ),
+        child: Lottie.asset(url),
       ),
     );
   }
