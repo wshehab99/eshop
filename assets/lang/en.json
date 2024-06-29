@@ -1,1 +1,13 @@
-{}
+{
+    "home": "Home",
+    "categories": "Categories",
+    "arabic_language": "Arabic language",
+    "english_language": "English language",
+    "category_products": "Category products",
+    "products_in": "Products in",
+    "unknown": "Unknown error",
+    "no_internet_connection": "No internet connection",
+    "retry": "Retry again",
+    "login_again": "Login again",
+    "details": "Details"
+}

@@ -21,4 +21,14 @@ class ProductCubit extends Cubit<ProductState> {
       emit(ProductView());
     });
   }
+
+  late Product product;
+  void showProduct(int id) async {
+    emit(ProductLoading());
+    (await _repository.showProduct(id))
+        .fold((l) => emit(ProductError(l.toBase(() => showProduct(id)))), (r) {
+      product = r;
+      emit(ProductView());
+    });
+  }
 }

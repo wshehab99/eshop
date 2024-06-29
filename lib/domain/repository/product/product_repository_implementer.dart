@@ -28,4 +28,16 @@ class ProductRepositoryImplementer implements ProductRepository {
     }
     return Left(ErrorDataSourceConfig.noInternetConnection.getFailure);
   }
+
+  @override
+  Future<Either<Failure, Product>> showProduct(int id) async {
+    if (await isInternetConnected) {
+      try {
+        return Right(await _api.showProduct(id));
+      } catch (e) {
+        return Left(Handler.handle(e).failure);
+      }
+    }
+    return Left(ErrorDataSourceConfig.noInternetConnection.getFailure);
+  }
 }

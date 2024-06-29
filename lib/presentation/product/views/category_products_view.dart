@@ -32,7 +32,7 @@ class _CategoryProductsViewState extends State<CategoryProductsView> {
           builder: (context, state) {
         ProductCubit cubit = context.read<ProductCubit>();
         return SingleChildScrollView(
-          padding: EdgeInsets.all(15),
+          padding: const EdgeInsets.all(15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -56,7 +56,7 @@ class _CategoryProductsViewState extends State<CategoryProductsView> {
               const SizedBox(height: 15),
               ListView.separated(
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 padding: const EdgeInsets.all(15),
                 itemBuilder: (context, index) =>
                     ProductWidget(cubit.products[index]),

@@ -7,6 +7,7 @@ abstract class StringManager {
   static const String englishLanguage = "english_language";
   static const String categoryProducts = "category_products";
   static const String productsIn = "products_in";
+  static const String details = "details";
 
   //errors
   static const String unknown = "unknown";

@@ -65,7 +65,7 @@ class ProductWidget extends StatelessWidget {
                               Icons.star_half,
                               color: Theme.of(context).primaryColor,
                               size: 15,
-                            )
+                            ),
                           ],
                         ),
                         Row(

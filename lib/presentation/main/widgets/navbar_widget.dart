@@ -17,7 +17,7 @@ class NavbarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipPath(
-      clipper: _CustomClipper(),
+      // clipper: _CustomClipper(),
       clipBehavior: Clip.antiAlias,
       child: Container(
         padding: EdgeInsets.symmetric(
